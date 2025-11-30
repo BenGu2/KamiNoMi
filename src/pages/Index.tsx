@@ -1,12 +1,71 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import ProductCard from '@/components/ProductCard';
+import { products } from '@/data/products';
+import heroImage from '@/assets/hero-washi.jpg';
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div>
+      {/* Hero Section */}
+      <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroImage}
+            alt="Japanese Washi Art"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+        </div>
+        <div className="relative h-full container mx-auto px-4 flex items-end pb-20">
+          <div className="fade-in">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif luxury-heading mb-4">
+              {t('hero.title')}
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              {t('hero.subtitle')}
+            </p>
+            <Link to="/shop">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                {t('hero.cta')}
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center mb-12 fade-in">
+          <h2 className="text-3xl md:text-4xl font-serif luxury-heading mb-4">
+            {t('products.title')}
+          </h2>
+          <p className="text-muted-foreground">
+            {t('products.freeShipping')}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* Brand Message */}
+      <section className="bg-muted py-20">
+        <div className="container mx-auto px-4 text-center max-w-2xl fade-in">
+          <h2 className="text-3xl md:text-4xl font-serif luxury-heading mb-6">
+            {t('craft.title')}
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {t('craft.whatText')}
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
