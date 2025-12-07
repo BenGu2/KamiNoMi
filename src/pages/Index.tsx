@@ -10,8 +10,8 @@ const Index = () => {
 
   return (
     <div>
-      {/* Hero Section - Full Screen */}
-      <section className="relative h-screen overflow-hidden">
+      {/* Hero Section - Exact Screen Height */}
+      <section className="relative h-[100dvh] overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}

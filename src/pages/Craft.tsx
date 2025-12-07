@@ -6,9 +6,6 @@ const Craft = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-4xl mx-auto">
-        <p className="text-2xl font-serif text-accent text-center mb-2 fade-in">
-          {t('craft.titleJp')}
-        </p>
         <h1 className="text-4xl md:text-5xl font-serif luxury-heading mb-12 text-center fade-in">
           {t('craft.title')}
         </h1>
