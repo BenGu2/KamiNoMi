@@ -9,7 +9,7 @@ const Index = () => {
   const { t } = useLanguage();
 
   return (
-    <div>
+    <div className="-mt-[73px]">
       {/* Hero Section - Exact Screen Height */}
       <section className="relative h-[100dvh] overflow-hidden">
         <div className="absolute inset-0">
@@ -21,7 +21,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
         </div>
-        <div className="relative h-full container mx-auto px-4 flex items-end pb-24">
+        <div className="relative h-full container mx-auto px-4 flex items-end pb-24 pt-20">
           <div className="fade-in max-w-2xl">
             <p className="text-3xl md:text-4xl font-serif text-accent mb-2">
               {t('brand.nameJp')}
