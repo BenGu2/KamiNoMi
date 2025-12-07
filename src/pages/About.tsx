@@ -6,9 +6,6 @@ const About = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto fade-in">
-        <p className="text-2xl font-serif text-accent text-center mb-2">
-          {t('brand.nameJp')}
-        </p>
         <h1 className="text-4xl md:text-5xl font-serif luxury-heading mb-8 text-center">
           {t('about.title')}
         </h1>
