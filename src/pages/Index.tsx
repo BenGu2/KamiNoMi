@@ -3,28 +3,34 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products';
-import heroImage from '@/assets/hero-washi.jpg';
+import heroImage from '@/assets/hero-washi.webp';
 
 const Index = () => {
   const { t } = useLanguage();
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+      {/* Hero Section - Full Screen */}
+      <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
             alt="Japanese Washi Art"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
         </div>
-        <div className="relative h-full container mx-auto px-4 flex items-end pb-20">
-          <div className="fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif luxury-heading mb-4">
-              {t('hero.title')}
+        <div className="relative h-full container mx-auto px-4 flex items-end pb-24">
+          <div className="fade-in max-w-2xl">
+            <p className="text-3xl md:text-4xl font-serif text-accent mb-2">
+              {t('brand.nameJp')}
+            </p>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif luxury-heading mb-4">
+              {t('brand.name')}
             </h1>
+            <p className="text-2xl md:text-3xl font-serif luxury-heading mb-2">
+              {t('hero.title')}
+            </p>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               {t('hero.subtitle')}
             </p>
@@ -58,6 +64,7 @@ const Index = () => {
       {/* Brand Message */}
       <section className="bg-muted py-20">
         <div className="container mx-auto px-4 text-center max-w-2xl fade-in">
+          <p className="text-2xl font-serif text-accent mb-4">{t('brand.nameJp')}</p>
           <h2 className="text-3xl md:text-4xl font-serif luxury-heading mb-6">
             {t('craft.title')}
           </h2>

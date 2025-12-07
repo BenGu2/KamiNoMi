@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-serif luxury-heading">
-            Washi
+            紙の美
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
