@@ -105,7 +105,7 @@ const translations: Record<Language, Record<string, string>> = {
   },
   he: {
     // Brand
-    'brand.name': 'קמינומי',
+    'brand.name': 'קאמינומי',
     'brand.nameJp': '紙の美',
     
     // Navigation
@@ -142,7 +142,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'הסיפור שלנו',
-    'about.intro': 'קמינומי נולד מאהבה לתרבות היפנית, לתחושת האסתטיקה המעודנת שלה וליופייה.',
+    'about.intro': 'קאמינומי נולד מאהבה לתרבות היפנית, לתחושת האסתטיקה המעודנת שלה וליופייה.',
     'about.inspiration': 'השראתי נבעה מהאיכות הנצחית של אומנות מסורתית, בה כל פרט מעוצב בכוונה ובכבוד לחומר. ברגע שנתקלתי בה, ידעתי שאני רוצה שגם אחרים יחוו זאת.',
     'about.quote': '"הטבע הוא האומן הראשון; האומן רק מנחה את צורתו."',
     'about.selection': 'מבחר הוואשי (和紙) שלנו משקף רוח זו - כל יצירה ייחודית, טבעית, ועשויה בשיטות בנות דורות.',
@@ -198,7 +198,7 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('he');
 
   const t = (key: string): string => {
     return translations[language][key] || key;
