@@ -65,7 +65,6 @@ const Index = () => {
       {/* Brand Message */}
       <section className="bg-muted py-20">
         <div className="container mx-auto px-4 text-center max-w-2xl fade-in">
-          <p className="text-2xl font-serif text-accent mb-4">{t('brand.nameJp')}</p>
           <h2 className="text-3xl md:text-4xl font-serif luxury-heading mb-6">
             {t('craft.title')}
           </h2>

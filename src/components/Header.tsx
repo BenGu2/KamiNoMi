@@ -23,22 +23,22 @@ const Header = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-sm hover:text-accent transition-colors">
+            <Link to="/" className="text-base hover:text-accent transition-colors">
               {t('nav.home')}
             </Link>
-            <Link to="/shop" className="text-sm hover:text-accent transition-colors">
+            <Link to="/shop" className="text-base hover:text-accent transition-colors">
               {t('nav.shop')}
             </Link>
-            <Link to="/about" className="text-sm hover:text-accent transition-colors">
+            <Link to="/about" className="text-base hover:text-accent transition-colors">
               {t('nav.about')}
             </Link>
-            <Link to="/craft" className="text-sm hover:text-accent transition-colors">
+            <Link to="/craft" className="text-base hover:text-accent transition-colors">
               {t('nav.craft')}
             </Link>
-            <Link to="/contact" className="text-sm hover:text-accent transition-colors">
+            <Link to="/contact" className="text-base hover:text-accent transition-colors">
               {t('nav.contact')}
             </Link>
-            <Link to="/faq" className="text-sm hover:text-accent transition-colors">
+            <Link to="/faq" className="text-base hover:text-accent transition-colors">
               {t('nav.faq')}
             </Link>
           </div>
