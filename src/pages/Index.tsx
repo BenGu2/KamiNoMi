@@ -19,7 +19,7 @@ const Index = () => {
             className="w-full h-full object-cover object-bottom"
             
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent" />
         </div>
         <div className="relative h-full container mx-auto px-4 flex items-end pb-24 pt-20">
           <div className="fade-in max-w-2xl">
