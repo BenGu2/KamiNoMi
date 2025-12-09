@@ -110,7 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Navigation
     'nav.home': 'דף הבית',
-    'nav.shop': 'חנות',
+    'nav.shop': 'גלריה',
     'nav.about': 'אודות',
     'nav.craft': 'אומנות וחומרים',
     'nav.contact': 'יצירת קשר',

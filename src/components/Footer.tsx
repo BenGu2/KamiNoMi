@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-serif mb-4">Washi</h3>
+            <h3 className="text-xl font-serif mb-4">{t('brand.name')}</h3>
             <p className="text-sm text-muted-foreground">
               {t('hero.subtitle')}
             </p>
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2024 Washi. {t('footer.rights')}.</p>
+          <p>© 2024 {t('brand.name')}. {t('footer.rights')}.</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-foreground transition-colors">
               {t('footer.privacy')}
