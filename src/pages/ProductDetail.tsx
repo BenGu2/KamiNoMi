@@ -5,11 +5,13 @@ import { Button } from '@/components/ui/button';
 import { products } from '@/data/products';
 import { ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
+import { useState, useEffect } from 'react';
 
 const ProductDetail = () => {
   const { id } = useParams();
   const { language, t } = useLanguage();
   const { addToCart } = useCart();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const product = products.find((p) => p.id === id);
 
@@ -24,6 +26,7 @@ const ProductDetail = () => {
     );
   }
 
+  const productImages = [product.images.thumbnail, product.images.detail];
   const name = language === 'he' ? product.nameHe : product.name;
   const description = language === 'he' ? product.descriptionHe : product.description;
 
@@ -32,21 +35,50 @@ const ProductDetail = () => {
     toast.success(language === 'he' ? 'נוסף לעגלה' : 'Added to cart');
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <Link to="/shop" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-8 transition-colors">
         <ArrowLeft className="w-4 h-4" />
-        {t('cart.continueShopping')}
+        Return
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 fade-in">
-        {/* Image */}
-        <div className="aspect-square bg-muted overflow-hidden">
-          <img
-            src={product.image}
-            alt={name}
-            className="w-full h-full object-cover"
-          />
+        {/* Images Gallery */}
+        <div className="space-y-4">
+          {/* Main image - large square */}
+          <div className="aspect-square bg-muted overflow-hidden rounded">
+            <img
+              src={productImages[currentImageIndex]}
+              alt={name}
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          {/* Secondary image thumbnail - small square */}
+          <div className="flex gap-4">
+            {productImages.map((img, idx) => {
+              const isActive = currentImageIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className={`w-24 h-24 bg-muted overflow-hidden rounded border-2 cursor-pointer transition-all ${
+                    isActive ? 'border-accent' : 'border-transparent hover:border-muted-foreground'
+                  }`}
+                  onClick={() => setCurrentImageIndex(idx)}
+                >
+                  <img
+                    src={img}
+                    alt={`${name} - ${idx + 1}`}
+                    className="w-full h-full object-contain hover:opacity-80 transition-opacity"
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Details */}
@@ -58,7 +90,6 @@ const ProductDetail = () => {
             <p className="text-3xl font-medium mb-2">
               {product.price} {t('common.currency')}
             </p>
-            <p className="text-sm text-accent">{t('products.freeShipping')}</p>
           </div>
 
           <div className="border-t border-b border-border py-6 space-y-4">
@@ -72,10 +103,6 @@ const ProductDetail = () => {
                 <span className="w-2 h-2 bg-accent rounded-full" />
                 {t('products.uniquePiece')}
               </p>
-              <p className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent rounded-full" />
-                {t('products.freeShipping')}
-              </p>
             </div>
           </div>
 
@@ -86,15 +113,9 @@ const ProductDetail = () => {
           >
             {t('products.addToCart')}
           </Button>
-
-          <div className="bg-muted p-6 rounded space-y-2">
-            <h3 className="font-serif text-xl mb-4">{t('craft.title')}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t('craft.whyText')}
-            </p>
-          </div>
         </div>
       </div>
+
     </div>
   );
 };

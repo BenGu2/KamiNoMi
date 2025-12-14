@@ -63,7 +63,7 @@ const Footer = () => {
               {t('footer.terms')}
             </Link>
             <Link to="/returns" className="hover:text-foreground transition-colors">
-              {t('footer.returns')}
+              Return
             </Link>
           </div>
         </div>

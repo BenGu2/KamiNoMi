@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useEffect } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +9,10 @@ import {
 
 const FAQ = () => {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const faqs = [
     {

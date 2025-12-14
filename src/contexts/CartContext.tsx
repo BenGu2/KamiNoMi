@@ -5,7 +5,10 @@ export interface Product {
   name: string;
   nameHe: string;
   price: number;
-  image: string;
+  images: {
+    thumbnail: string;
+    detail: string;
+  };
   description: string;
   descriptionHe: string;
 }

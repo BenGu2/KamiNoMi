@@ -1,7 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useEffect } from 'react';
 
 const Craft = () => {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -11,59 +16,84 @@ const Craft = () => {
         </h1>
 
         <div className="space-y-12">
-          {/* What is Washi */}
+          {/* Introduction - Subtitle + First Paragraphs */}
           <div className="fade-in">
-            <h2 className="text-3xl font-serif luxury-heading mb-4">
-              {t('craft.what')}
-            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              {t('craft.subtitle')}
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              {t('craft.intro1')}
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              {t('craft.intro2')}
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('craft.whatText')}
+              {t('craft.history')}
             </p>
           </div>
 
-          {/* Natural Materials */}
-          <div className="bg-muted p-8 rounded fade-in">
-            <h2 className="text-3xl font-serif luxury-heading mb-4">
-              {t('craft.materials')}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('craft.materialsText')}
-            </p>
-          </div>
-
-          {/* Traditional Process */}
+          {/* How Traditional Washi Is Made */}
           <div className="fade-in">
-            <h2 className="text-3xl font-serif luxury-heading mb-4">
-              {t('craft.process')}
+            <h2 className="text-3xl font-serif luxury-heading mb-8">
+              {t('craft.processTitle')}
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('craft.processText')}
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              {t('craft.processIntro')}
             </p>
+
+            <div className="space-y-6">
+              {/* Step 1 */}
+              <div className="border-l-4 border-accent pl-6">
+                <h3 className="text-xl font-serif mb-3">{t('craft.step1Title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('craft.step1')}
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="border-l-4 border-accent pl-6">
+                <h3 className="text-xl font-serif mb-3">{t('craft.step2Title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('craft.step2')}
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="border-l-4 border-accent pl-6">
+                <h3 className="text-xl font-serif mb-3">{t('craft.step3Title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('craft.step3')}
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="border-l-4 border-accent pl-6">
+                <h3 className="text-xl font-serif mb-3">{t('craft.step4Title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('craft.step4')}
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="border-l-4 border-accent pl-6">
+                <h3 className="text-xl font-serif mb-3">{t('craft.step5Title')}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t('craft.step5')}
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Natural Variations */}
+          {/* Crafted by Hand, Shaped by Nature */}
           <div className="bg-muted p-8 rounded fade-in">
-            <h2 className="text-3xl font-serif luxury-heading mb-4">
-              {t('craft.why')}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('craft.whyText')}
-            </p>
-          </div>
-
-          {/* The Frame */}
-          <div className="border-t border-border pt-12 fade-in">
-            <p className="text-2xl font-serif text-accent mb-2">
-              {t('craft.frame')}
-            </p>
-            <h2 className="text-3xl font-serif luxury-heading mb-4">
-              {t('craft.frameTitle')}
+            <h2 className="text-3xl font-serif luxury-heading mb-6">
+              {t('craft.closingTitle')}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              {t('craft.frameText')}
+              {t('craft.closing1')}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('craft.frameDetails')}
+              {t('craft.closing2')}
             </p>
           </div>
         </div>

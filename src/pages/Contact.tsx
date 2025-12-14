@@ -5,9 +5,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { MessageCircle, Instagram } from 'lucide-react';
 import { toast } from 'sonner';
+import { useEffect } from 'react';
 
 const Contact = () => {
   const { t, language } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

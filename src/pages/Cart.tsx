@@ -4,10 +4,15 @@ import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { X } from 'lucide-react';
+import { useEffect } from 'react';
 
 const Cart = () => {
   const { t, language } = useLanguage();
   const { items, removeFromCart, totalPrice } = useCart();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (items.length === 0) {
     return (

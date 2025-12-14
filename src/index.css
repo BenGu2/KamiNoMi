@@ -72,13 +72,13 @@ All colors MUST be HSL.
   }
 
   .fade-in {
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;

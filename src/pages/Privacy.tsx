@@ -1,7 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useEffect } from 'react';
 
 const Privacy = () => {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto px-4 py-12">
