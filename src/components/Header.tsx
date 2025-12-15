@@ -35,6 +35,9 @@ const Header = () => {
             <Link to="/craft" className="text-base hover:text-accent transition-colors">
               {t('nav.craft')}
             </Link>
+            <Link to="/frame" className="text-base hover:text-accent transition-colors">
+              {t('nav.frame')}
+            </Link>
             <Link to="/contact" className="text-base hover:text-accent transition-colors">
               {t('nav.contact')}
             </Link>

@@ -28,8 +28,8 @@ const FAQ = () => {
       answer: t('faq.uniqueAnswer'),
     },
     {
-      question: t('faq.care'),
-      answer: t('faq.careAnswer'),
+      question: t('faq.custom'),
+      answer: t('faq.customAnswer'),
     },
     {
       question: t('faq.returns'),
