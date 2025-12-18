@@ -31,6 +31,14 @@ const About = () => {
           </blockquote>
 
           <p className="text-lg text-muted-foreground leading-relaxed">
+            {t('about.connection')}
+          </p>
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {t('about.paper')}
+          </p>
+
+          <p className="text-lg text-muted-foreground leading-relaxed">
             {t('about.selection')}
           </p>
 

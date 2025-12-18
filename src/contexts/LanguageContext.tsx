@@ -52,11 +52,13 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'Our Story',
-    'about.intro': 'Kaminomi is built from a love for Japanese culture, its refined sense of aesthetics and its beauty.',
-    'about.inspiration': 'I was inspired by the timeless quality of traditional craftsmanship, where every detail is shaped with intention and respect for the material. The moment I came across it, I knew I wanted others to experience it too.',
+    'about.intro': 'Kaminomi was born from a deep admiration for Japanese culture, its quiet refinement, its respect for nature, and its timeless sense of beauty.',
+    'about.inspiration': 'I was drawn to traditional craftsmanship, where nothing is rushed and every detail is shaped with intention. In these practices, the material is never forced, it is understood.',
     'about.quote': '"Nature is the first craftsman; the artisan only guides its form."',
-    'about.selection': 'Our curated washi (和紙) selection reflects this spirit—each piece unique, natural, and made through generations-old methods.',
-    'about.closing': 'To own one is to bring home a small part of Japan: its art, its culture, and the craftsmanship that defines it.',
+    'about.connection': 'From the moment I encountered washi, I knew I wanted others to experience this feeling as well.',
+    'about.paper': 'Words carry thoughts and emotions, and paper preserves them. In Japan, the harmony between culture and exceptional paper elevated this relationship into art: calligraphy, ink painting, picture scrolls, and woodblock prints, where dozens of impressions are layered by hand using a baren. In all of these, washi has long been regarded as the finest foundation.',
+    'about.selection': 'At Kaminomi, I curate washi papers that are artworks in themselves. Each sheet is selected for its beauty, texture, and character. created by skilled Japanese craftsmen who have dedicated their practice to perfecting their craft. These papers are not merely backgrounds or supports, they are the art. By combining these exceptional creative papers with handmade framing crafted from the finest materials, each piece becomes a complete work that honors both the paper and the heritage it carries.',
+    'about.closing': 'To own a sheet of washi is to bring home more than paper. It is to hold a small part of Japan, its art, its philosophy, and the craftsmanship that continues to give meaning and value to everyday life.',
     
     // Craft
     'craft.title': 'What Is Washi?',
@@ -176,11 +178,13 @@ const translations: Record<Language, Record<string, string>> = {
     
     // About
     'about.title': 'הסיפור שלנו',
-    'about.intro': 'קאמינומי נולד מאהבה לתרבות היפנית, לתחושת האסתטיקה המעודנת שלה וליופייה.',
-    'about.inspiration': 'השראתי נבעה מהאיכות הנצחית של אומנות מסורתית, בה כל פרט מעוצב בכוונה ובכבוד לחומר. ברגע שנתקלתי בה, ידעתי שאני רוצה שגם אחרים יחוו זאת.',
-    'about.quote': '"הטבע הוא האומן הראשון; האומן רק מנחה את צורתו."',
-    'about.selection': 'מבחר הוואשי (和紙) שלנו משקף רוח זו - כל יצירה ייחודית, טבעית, ועשויה בשיטות בנות דורות.',
-    'about.closing': 'להחזיק יצירה כזו זה להביא הביתה חלק קטן מיפן: האמנות שלה, התרבות שלה, והאומנות שמגדירה אותה.',
+    'about.intro': 'קאמינימי נולד מתוך הערכה עמוקה לתרבות היפנית, לעידון השקט שלה, לכבוד שהיא רוחשת לטבע, ולתחושת היופי העל זמני שמאפיינת אותה.',
+    'about.inspiration': 'נמשכתי אל מלאכת היד המסורתית, שבה דבר אינו נעשה בחיפזון וכל פרט מעוצב בכוונה ובתשומת לב. במסורות אלו החומר אינו נכפה לצורה, הוא מובן.',
+    'about.quote': '"הטבע הוא האומן הראשון; האומן האנושי רק מנחה את צורתו."',
+    'about.connection': 'מהרגע שבו נתקלתי בנייר הוושי, ידעתי שאני רוצה שגם אחרים יחוו את התחושה הזו.',
+    'about.paper': 'מילים נושאות מחשבות ורגשות, והנייר שומר אותן. ביפן, ההרמוניה שבין תרבות לנייר איכותי הפכה את הקשר הזה לאמנות: קליגרפיה, ציור בדיו, מגילות מצוירות והדפסי עץ, שבהם שכבות של צבע מוטבעות בעבודת יד, אחת אחרי השנייה, באמצעות בָּרֶן. בכל אלה נחשב נייר הוושי מאז ומעולם לבסיס האיכותי והמעודן ביותר.',
+    'about.selection': 'בקאמינומי אני אוצר ניירות וושי שהם יצירות אמנות בפני עצמן. כל גיליון נבחר בקפידה בזכות יופיו, מרקמו ואופיו, ונוצר בידי אומנים יפנים מיומנים שהקדישו את חייהם לשכלול מלאכתם. ניירות אלו אינם רק רקע או תשתית, הם האמנות עצמה. בשילוב עם מסגור בעבודת יד, העשוי מהחומרים האיכותיים ביותר, כל יצירה הופכת לשלמה, כזו שמכבדת הן את הנייר והן את המורשת שהוא נושא עמו.',
+    'about.closing': 'להחזיק נייר וושי פירושו להביא הביתה הרבה יותר מנייר. זהו חלק קטן של יפן, של אמנותה, של תפיסת עולמה ושל מלאכת היד שממשיכה להעניק משמעות וערך לחיי היומיום.',
     
     // Craft
     'craft.title': 'מהו וואשי?',
